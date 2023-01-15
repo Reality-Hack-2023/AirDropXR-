@@ -224,7 +224,7 @@ public class ContentMgr : MonoBehaviour
 
    Sprite _GetVideo360PreviewSprite(int contentID)
    {
-      if (contentID < 0 || contentID >= Videos.Length)
+      if (contentID < 0 || contentID >= Videos360.Length)
          return null;
       return Videos360[contentID].PreviewImage;
    }

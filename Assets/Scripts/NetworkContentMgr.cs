@@ -124,8 +124,8 @@ public class NetworkContentMgr : MonoBehaviour
             //VRPhoneMgr.I.SetContentForwardOffset(TranslationOffsetScale*c.NetContent.TranslationOffset);
             //VRPhoneMgr.I.SetContentRotationOffset(RotationOffsetScale*c.NetContent.RotationOffset);
             //VRPhoneMgr.I.SetContentSizeOffset(SizeOffsetScale * c.NetContent.SizeOffset);
-            VRPhoneMgr.I.SetContentForwardOffset(TranslationOffsetScale*c.NetContent.transform.localPosition.x);
-            VRPhoneMgr.I.SetContentRotationOffset(RotationOffsetScale*c.NetContent.transform.localPosition.y);
+            VRPhoneMgr.I.SetContentForwardOffset(TranslationOffsetScale*c.NetContent.transform.localPosition.y);
+            VRPhoneMgr.I.SetContentRotationOffset(RotationOffsetScale*c.NetContent.transform.localPosition.x);
             VRPhoneMgr.I.SetContentSizeOffset(SizeOffsetScale * c.NetContent.transform.localPosition.z);
 
             int manipModeInt = c.NetContent.ManipulationMode;

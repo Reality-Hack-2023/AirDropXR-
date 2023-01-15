@@ -370,7 +370,8 @@ public class VRPhoneMgr : MonoBehaviour
       //cycle thru image "frames" with cheat
       if(EnableCycleImageFramesWithButton)
       {
-         if(GetIsManipulating() &&  VRInputMgr.GetTopFaceButtonDown(VRInputMgr.Hand.Right))
+         bool isCalibration = VRPhoneCalibrator.I && VRPhoneCalibrator.I.GetIsCalibrating();
+         if (GetIsManipulating() &&  VRInputMgr.GetTopFaceButtonDown(VRInputMgr.Hand.Right) && !isCalibration)
          {
             _curContent.CycleToNextFrame();
          }

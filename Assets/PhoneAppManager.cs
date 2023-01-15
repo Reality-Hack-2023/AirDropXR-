@@ -39,6 +39,8 @@ public class PhoneAppManager : MonoBehaviour
     private ContentScript _selectedContent = null;
     private FileTypeScript _selectedFileType = null;
     private ReturnScript _selectedReturnType = null;
+    public RandomClips Audio; 
+    
 
     public static PhoneAppManager I { get; private set; }
     void Awake()
@@ -82,6 +84,7 @@ public class PhoneAppManager : MonoBehaviour
     void Start()
     {
         SetState(state.FileTypeSelecetor);
+        Audio = GetComponent<RandomClips>();
        
     }
     void SetState(state newstate)
@@ -115,14 +118,17 @@ public class PhoneAppManager : MonoBehaviour
     {
             //int contentId = b.ContentID;
             //Button button = b.GetButton();
-
+            
+            
             _selectedContent = b;
             SetState(state.Flick);
             if(flickimage)
+               Audio.PlayUISound();
                flickimage.sprite = _selectedContent.contentImage.sprite;
     }
     void _OnFileTypeButtonPressed(FileTypeScript  b)
     {
+            Audio.PlayUISound();
             //int contentId = b.ContentID;
             //Button button = b.GetButton();
             Debug.Log("filetypebuttonpressed");
@@ -148,6 +154,8 @@ public class PhoneAppManager : MonoBehaviour
     }
     void _OnReturnButtonPressed(ReturnScript  b)
     {
+
+        Audio.PlayBack();
             //int contentId = b.ContentID;
             //Button button = b.GetButton();
             if(_contentDataSync)
@@ -160,7 +168,7 @@ public class PhoneAppManager : MonoBehaviour
     }
     void _OnCompleteButtonPressed(CompleteScript b) {
         Debug.Log("Drawing Complete");
-
+        Audio.PlayConfirm();
       _hasDrawImageSprite = true;
       if (flickimage)
          flickimage.sprite = DrawImageSpriteRnd.sprite;
@@ -173,7 +181,7 @@ public class PhoneAppManager : MonoBehaviour
         Debug.Log("OnFlick" + _currentState);
 
         if(_currentState != state.Flick ) return;
-
+          
          if(NetworkMgr.I.GetIsMultiplayerSession() ) 
         {
             
@@ -213,6 +221,7 @@ public class PhoneAppManager : MonoBehaviour
             
             
             SetState(state.Editor);
+            
 
         }
        

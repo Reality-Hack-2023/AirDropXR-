@@ -11,6 +11,12 @@ public class VRPhoneCalibrator : MonoBehaviour
 
    public AnimationCurve FlickAnimEase = new AnimationCurve(new Keyframe(0.0f, 0.0f), new Keyframe(1.0f, 1.0f));
 
+   public static VRPhoneCalibrator I { get; private set; }
+   void Awake()
+   {
+      I = this;
+   }
+
    void TriggerFlickAnim()
    {
       StartCoroutine(_DoFlickAnim());

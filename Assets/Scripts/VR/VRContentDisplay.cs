@@ -44,9 +44,9 @@ public class VRContentDisplay : MonoBehaviour
    public enum ContentTypes : uint
    {
       Image = 0,
-      Video,      
-      Audio,
-      Video360
+      Video,           
+      Video360,
+      Audio
    }
 
    void Awake()
