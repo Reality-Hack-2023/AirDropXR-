@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Oculus/SampleFramework/Usage/Passthrough/Scenes/AugmentedObjects.unity
+    guid: 9afeada2bbd240b4981cfb6abb525418
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 339706959bcf27b4b878521122f7c336, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e7de0ce7e2ea92344a83e973b02238b8, type: 2}
