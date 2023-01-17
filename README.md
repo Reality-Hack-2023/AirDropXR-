@@ -1,4 +1,5 @@
 [Version Control w/ actual commits](https://wvs.io/mmandel/mitrealityhack2023) 
+<br>
 [Devpost](https://devpost.com/software/airdrop-xr)
 # The Problem
 Smartphones are often used in conversation in an awkward or intrusive fashion. We’ve all had to huddle around someone’s phone to see that photo or meme video they’re excited to share. AirDrop XR lets you drag-and-drop content (images, videos, and sketches) from your phone to the world for anyone with an Augmented Reality headset to see.
